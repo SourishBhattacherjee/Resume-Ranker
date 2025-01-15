@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Resume Matching</title>
+    <style>
+        body {
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f9;
+        }
+        
+        h2 {
+            font-size: 1.52rem;
+            text-align: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 1rem;
+            border-collapse: collapse;
+
+            /* border-style: solid; */
+            /* border-color: rgba(111, 111, 111, 0.491); */
+            padding: 1rem;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input{
+            font-size: 16px;
+            padding: 0.5rem;
+            border-radius: 0.2rem;
+            margin-top: 0.5rem;
+        }
+
+        button {
+            font-size: 1rem;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 1.25rem;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <h2>Job Resume Matching</h2>
+        <label for="job_title">Job Title:</label>
+        <input type="text" id="job_title" name="job_title" required><br><br>
+
+        <label for="job_description">Skills Required For the Job:</label>
+        <input type="text" id="job_description" name="job_description" required></textarea><br><br>
+
+        <label for="resumes">Upload Resumes:</label>
+        <!-- Allow PDF files for resume upload -->
+        <input type="file" id="resumes" name="resumes" multiple accept=".pdf"><br><br>
+
+        <button type="submit">Check</button>
+    </form>
+</body>
+</html>
